@@ -1,4 +1,5 @@
 import asyncio
+import os
 import threading
 import time
 from asyncio import Future
@@ -80,4 +81,6 @@ def generate(prompt: str):
     return output
 
 
-bot.run("MTE1NzE3NTE0MDU4NTU4MjYwMw.GEcU-s.R38hcO5HDKJxkBT_-th1-kiK3Zg2aj6l4yOg0E")
+# 環境変数からトークンを読み込む
+token = os.environ["TOKEN"]
+bot.run(token)
